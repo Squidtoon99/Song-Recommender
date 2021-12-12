@@ -18,7 +18,7 @@
     <div {id} class="song" in:fly={{ y: winHeight, duration: 1500 }} out:fade>
         <div class="container" id="song">
             <div class="columns">
-                <div class="column is-half">
+                <div class="column">
                     <div class="card">
                         <div class="card-content">
                             <div class="media">
@@ -37,7 +37,7 @@
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4 has-text-weight-bold">
+                                    <p class="title is-2 has-text-weight-bold">
                                         {name}
                                     </p>
                                     <p class="subtitle is-6">

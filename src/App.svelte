@@ -1,6 +1,10 @@
 <script>
 	import AutoComplete from "simple-svelte-autocomplete";
 	import Song from "./Song.svelte";
+
+	let access_token =
+		"BQD5ZS2BvH0QyKjBvDJgu-0NX7zxWkxXeKnI960TfFCYOVF5wY-XL-CsBkZTvuwUTxDLgw3pvSJZJVo-kEo";
+
 	let genBtnDisabled = true;
 	let currentSong = {};
 	$: {
@@ -10,9 +14,6 @@
 	var results = [];
 
 	const API_URL = "https://api.spotify.com/v1/";
-	const accessToken =
-		"BQDQu7JY_xi8yt9uQbpgQIeAYDhDmwyazB8LuPJhMzyjBD4EQsof7APbTXQtx2rb-DtwO8LUIoA8JhQFqjY";
-
 	const findSongs = async (query) => {
 		var url = new URL(API_URL + "search?");
 		var params = new URLSearchParams({
@@ -23,7 +24,7 @@
 
 		const res = await fetch(url + params, {
 			headers: {
-				Authorization: "Bearer " + accessToken,
+				Authorization: "Bearer " + access_token,
 			},
 		});
 		console.log(res);
@@ -66,7 +67,7 @@
 
 		const res = await fetch(url + params, {
 			headers: {
-				Authorization: "Bearer " + accessToken,
+				Authorization: "Bearer " + access_token,
 			},
 		});
 		console.log(res);

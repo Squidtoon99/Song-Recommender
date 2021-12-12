@@ -3,7 +3,7 @@
 	import Song from "./Song.svelte";
 
 	let access_token =
-		"BQD5ZS2BvH0QyKjBvDJgu-0NX7zxWkxXeKnI960TfFCYOVF5wY-XL-CsBkZTvuwUTxDLgw3pvSJZJVo-kEo";
+		"BQD7E9RF_uelZRCITjrl3aaUIGtCcbrT7j6H7BRyRYrZEBVYQvbixq68wx6pq3M_8JwlrgPgt_EMw36b3BI";
 
 	let genBtnDisabled = true;
 	let currentSong = {};

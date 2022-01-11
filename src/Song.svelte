@@ -1,5 +1,5 @@
 <script>
-    import { fade, fly } from "svelte/transition";
+    import { fade, fly, slide } from "svelte/transition";
 
     export let name;
     export let artists;
@@ -15,7 +15,7 @@
 
 <svelte:window bind:innerHeight={winHeight} />
 {#if visible}
-    <div {id} class="song" in:fly={{ y: winHeight, duration: 1500 }} out:fade>
+    <div {id} class="song" transition:fly|local={{ y: winHeight, duration: 1500 }} >
         <div class="container" id="song">
             <div class="columns">
                 <div class="column">
@@ -45,18 +45,6 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- <div class="content is-hidden-mobile">
-                                <iframe
-                                    title={name}
-                                    src={`https://open.spotify.com/embed/track/${id}`}
-                                    width="100%"
-                                    height="100"
-                                    frameborder="0"
-                                    allowtransparency="true"
-                                    allow="encrypted-media"
-                                />
-                            </div> -->
                         </div>
                     </div>
                 </div>
